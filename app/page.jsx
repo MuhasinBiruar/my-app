@@ -3,7 +3,7 @@
 export default function Home() {
   return (
     <div className="text-center">
-      Welcome to the Home Page.
+      <h2>Muhaisin Xavier E. Biruar</h2>
     </div>
   );
 }
