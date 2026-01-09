@@ -4,9 +4,9 @@ export default function Header() {
   return (
     <>
       {/* This is our new header */}
-      <div className="sticky top-0 border-b border-t"> 
+      <div className="pt-2 pb-2 sticky top-0 border-b border-t bg-gray-700 text-white"> 
         <div className="flex justify-between"> {/* This is for fixing and positioning*/}
-          <div className="ml-4"> {/* Spacing and margin*/}
+          <div className="relative top-1 ml-4"> {/* Spacing and margin*/}
             <span className="text-2xl font-bold">Dashboard</span>
           </div>
           <nav className="mr-4 text-lg pt-1 pb-1 gap-2 mt-1 mb-1">
@@ -25,7 +25,7 @@ export function Footer() {
   return (
     <>
       {/* This is our new header */}
-      <div className="fixed bottom-0 w-full border-b border-t"> 
+      <div className="fixed bottom-0 w-full border-b border-t bg-gray-700 text-white text-center"> 
         This is the footer
       </div>
       {/* End of Footer and start of the main div */}
