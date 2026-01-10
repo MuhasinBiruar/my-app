@@ -6,8 +6,8 @@ export default function Home() {
       <div className="w-full md:w-[20%]">
         <div className=" bg-gray-600 h-full md:h-[40%] rounded-lg shadow-2xl border-2 border-gray-400 p-8 w-full
         transition-transform duration-300 ease-in-out hover:scale-110">
-          <Image src="/s7xn4xUQ.jpg" alt="profile picture" width={160} height={160} className="ml-3 w-40 rounded-full shadow-xl 
-         shadow-orange-300 border-2 border-amber-200" />
+          <Image src="/s7xn4xUQ.jpg" alt="profile picture" width={160} height={160} className="mx-auto w-40 rounded-full shadow-xl 
+         shadow-orange-300 border-2 border-amber-200 " />
           <h2 className="mt-8 text-center font-serif text-orange-300">Muhaisin Xavier E. Biruar</h2>
         </div>
         <div className="pt-2 pl-2 w-full h-[20%] bg-gray-600 rounded-lg mt-8 transition-transform duration-300 ease-in-out
