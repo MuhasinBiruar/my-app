@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <>
       {/* This is our new header */}
-      <div className="pt-2 pb-2 sticky top-0 border-b border-t bg-gray-700 text-white shadow-2xl "> 
+      <div className="pt-2 pb-2 sticky top-0 z-50 border-b border-t bg-gray-700 text-white shadow-2xl "> 
         <div className="flex justify-between"> {/* This is for fixing and positioning*/}
           <div className="relative top-1 ml-4"> {/* Spacing and margin*/}
             <span className="text-2xl font-bold font-serif">Dashboard</span>
