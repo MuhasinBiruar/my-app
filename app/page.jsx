@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { School, Notebook } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -29,7 +30,10 @@ export default function Home() {
         <hr className="mt-2 "/>
         <div className="mt-4 p-3 pt-2 md:p-4 md:pt-2 bg-white h-auto md:h-[40%] rounded-md border-2 
         border-gray-300 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 overflow-auto w-full">
-          <p className="font-bold font-serif text-left text-sm md:text-md">Student</p>
+          <div className="flex items-center gap-2">
+            <Notebook size={24} color="Orange"/>
+            <p className="font-bold font-serif text-left text-sm md:text-md">Student</p>
+          </div>
           <p className="font-serif text-left text-xs text-gray-400">March 16, 2005</p>
           <p className="font-serif text-left text-xs md:text-sm mt-1">Currently studying in <b>Ateneo de Davao University for a Bachelor's 
             degree in BS Computer Science, </b>
@@ -49,9 +53,12 @@ export default function Home() {
         <div className="flex flex-row justify gap-4 h-[45%] mt-4">
           <div className="bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[50%]
           transition-transform duration-300 ease-in-out hover:scale-105 overflow-auto">
-            <p className="font-bold font-serif text-left text-md">
-              Academic Journey
-            </p>
+            <div className="flex items-center gap-2">
+              <School size={24} color="Orange"/>
+              <p className="font-bold font-serif text-left text-md">
+                Academic Journey
+              </p>
+            </div>
             <ul className="list-disc list-inside ml-2">
               <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
                 <span className="list-item"><b>Cotabato City Institute</b> (Kindergarten)</span>
