@@ -2,7 +2,6 @@ import Image from "next/image";
 import { School, Notebook, Mail } from 'lucide-react';
 import Animation from "./components/utility.jsx";
 
-const animate = "transition-transform duration-300 ease-in-out hover:scale-115";
 
 export default function Home() {
   return (
@@ -57,7 +56,7 @@ export default function Home() {
         </div>
         <div className="flex flex-row justify gap-4 h-[45%] mt-4">
           <div className={`bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[50%]
-          ${Animation.hover(105)} overflow-auto`}>
+          ${Animation.hover(110)} overflow-auto`}>
             <div className="flex items-center gap-2">
               <School size={24} color="Orange" className={Animation.hover(110)}/>
               <p className="font-bold font-serif text-left text-md">
@@ -76,7 +75,7 @@ export default function Home() {
             </ul>
           </div>
           <div className={`bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[50%]
-          ${Animation.hover(105)} overflow-auto`}>
+          ${Animation.hover(110)} overflow-auto`}>
             <p className="font-bold font-serif text-left text-md">
               Beepes2
             </p>
