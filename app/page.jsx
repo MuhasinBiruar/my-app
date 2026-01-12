@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { School, Notebook, Mail } from 'lucide-react';
-import Animation, {divGap} from "./components/utility.jsx";
+import Animation from "./components/utility.jsx";
 
 const animate = "transition-transform duration-300 ease-in-out hover:scale-115";
 
@@ -16,8 +16,8 @@ export default function Home() {
         </div>
         <div className={`pt-2 pl-2 w-full h-[20%] bg-gray-600 rounded-lg mt-8 {} ${Animation.hover(110)} shadow-2xl border-2 border-gray-400 overflow-auto`}>
             <p className="text-left text-orange-300 font-serif text-sm">Computer Science Student / 2nd year</p>
-            <div className={`${divGap(2)}`}>
-            <Mail size={12}color="orange" strokeWidth={2.75} className={Animation.hover(110)}/>
+            <div className={`${Animation.divGap(2)}`}>
+            <Mail size={12} color="orange" strokeWidth={2.75} className={Animation.hover(110)}/>
             <p className="text-left text-orange-300 font-serif text-sm">mxebiruar@addu.edu.ph</p>
             </div>
             <p className="text-left text-orange-300 font-serif text-sm">Davao City, Philippines</p>
