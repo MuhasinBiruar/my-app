@@ -3,15 +3,15 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex flex-col p-8 md:flex-row h-full md:h-200">
-      <div className="w-full md:w-[20%]">
-        <div className=" bg-gray-600 h-full md:h-[40%] rounded-lg shadow-2xl border-2 border-gray-400 p-8 w-full
+      <div className="w-[20%]] mx-auto md:w-[20%]">
+        <div className=" bg-gray-600 h-[0%] md:h-[40%] rounded-lg shadow-2xl border-2 border-gray-400 p-8 md:w-full
         transition-transform duration-300 ease-in-out hover:scale-110">
-          <Image src="/s7xn4xUQ.jpg" alt="profile picture" width={160} height={160} className="mx-auto w-40 rounded-full shadow-xl 
-         shadow-orange-300 border-2 border-amber-200 " />
+          <Image src="/s7xn4xUQ.jpg" alt="profile picture" width={160} height={160} className="mx-auto md:w-40 rounded-full shadow-xl 
+         shadow-orange-300 border-2 border-amber-200 transition-transform duration-300 ease-in-out hover:scale-120" />
           <h2 className="mt-8 text-center font-serif text-orange-300">Muhaisin Xavier E. Biruar</h2>
         </div>
         <div className="pt-2 pl-2 w-full h-[20%] bg-gray-600 rounded-lg mt-8 transition-transform duration-300 ease-in-out
-        hover:scale-110 shadow-2xl border-2 border-gray-400">
+        hover:scale-110 shadow-2xl border-2 border-gray-400 overflow-auto">
             <p className="text-left text-orange-300 font-serif text-sm">Computer Science Student / 2nd year</p>
             <p className="text-left text-orange-300 font-serif text-sm">20 Years Old</p>
             <p className="text-left text-orange-300 font-serif text-sm">Davao City, Philippines</p>
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
       </div>
       
-      <div className="p-8 pl-30 pt-0 w-full h-full md:w-[85%]">
+      <div className="p-8 pl-30 mt-5 ml-[-20%] md:ml-0 md:mt-0 pt-0 w-[120%] h-full md:w-[85%]">
         <h2 className="font-serif font-bold text-left text-lg">About me</h2>
         <hr className="mt-2 "/>
         <div className="mt-4 p-3 pt-2 md:p-4 md:pt-2 bg-white h-auto md:h-[40%] rounded-md border-2 
@@ -46,12 +46,22 @@ export default function Home() {
             data structures, algorithms, web development, and database management.</b>
           </p>
         </div>
-        <div className="flex gap-4 h-[45%] mt-4">
+        <div className="flex flex-row justify gap-4 h-[45%] mt-4">
           <div className="bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[50%]
-          transition-transform duration-300 ease-in-out hover:scale-105">
+          transition-transform duration-300 ease-in-out hover:scale-105 overflow-auto">
             <p className="font-bold font-serif text-left text-md">
-              Beepes
+              Academic Journey
             </p>
+            <ul className="list-disc list-inside ml-2">
+              <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
+                <span className="list-item"><b>Cotabato City Institute</b> (Kindergarten)</span>
+                <span className="text-gray-400 font-bold">2011-2013</span>
+              </li>
+              <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
+                <span className="list-item"><b>Ateneo de Davao University Senior High School</b> (Senior High)</span>
+                <span className="text-gray-400 font-bold">2021-2023</span>
+              </li>
+            </ul>
           </div>
           <div className="bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[50%]
           transition-transform duration-300 ease-in-out hover:scale-105">
