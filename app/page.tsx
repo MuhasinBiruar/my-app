@@ -100,11 +100,11 @@ const TwoColumnInfo = () => {
               </li>
               <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
                 <span className="list-item"><b>Ateneo de Davao University Senior High School</b> (Senior High)</span>
-                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2021-2024</span>
+                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2021-2025</span>
               </li>
               <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
                 <span className="list-item"><b>Ateneo de Davao University</b> (College)</span>
-                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2024-Present</span>
+                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2025-Present</span>
               </li>
             </ul>
             <Modals/>
