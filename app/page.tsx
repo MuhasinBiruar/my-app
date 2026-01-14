@@ -115,6 +115,7 @@ const TwoColumnInfo = () => {
               Beepes2
             </p>
           </div>
+          
         </div>
   )
 }
