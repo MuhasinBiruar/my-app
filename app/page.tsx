@@ -82,7 +82,7 @@ const TwoColumnInfo = () => {
   return(
     <div className="flex flex-row justify gap-4 h-[45%] mt-4">
           <div id="education" className={`bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[65%] 
-          ${Animation.hover2(1.5)} overflow-auto hover:w-[150%] transition-all duration-500 ease-in-out hover:z-10 relative`}>
+          overflow-auto hover:w-[150%] transition-all duration-500 ease-in-out hover:scale-150 hover:z-10 relative`}>
             <div className="flex items-center gap-2">
               <School size={24} color="Orange" className={Animation.hover(110)}/>
               <p className="font-bold font-serif text-left text-md">
