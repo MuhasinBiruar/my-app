@@ -1,7 +1,8 @@
 const hover = (scaleNum: number) => `transition-transform duration-300 ease-in-out hover:scale-${scaleNum}`;
+const hover2 = (scaleNum: number) => `transition-transform duration-300 ease-in-out hover:scale-[${scaleNum}]`;
 
 export const divGap = (gapNum: number) => `flex items-center gap-${gapNum}`;
 
-const utilities = {hover, divGap};
+const utilities = {hover, divGap, hover2};
 export default utilities;
 
