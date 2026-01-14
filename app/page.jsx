@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { School, Notebook, Mail } from 'lucide-react';
+import { School, Notebook, Mail, MapPin, Facebook, Linkedin, Github} from 'lucide-react';
 import Animation from "./components/utility.jsx";
 
 
@@ -19,13 +19,25 @@ export default function Home() {
             <Mail size={12} color="orange" strokeWidth={2.75} className={Animation.hover(110)}/>
             <p className="text-left text-orange-300 font-serif text-sm">mxebiruar@addu.edu.ph</p>
             </div>
+            <div className={`${Animation.divGap(2)}`}>
+              <MapPin size={12} color="orange" strokeWidth={2.75} className={Animation.hover(110)}/>
             <p className="text-left text-orange-300 font-serif text-sm">Davao City, Philippines</p>
+            </div>
+            <div className={`${Animation.divGap(2)}`}>
+            <Facebook size={12} color="orange" strokeWidth={2.75} className={Animation.hover(110)}/>
             <p className="text-left text-orange-300 font-serif text-sm hover:text-blue-500 underline">
               <a href="https://www.facebook.com/hyder3162005" target="_blank">Facebook</a></p>
+            </div>
+            <div className={`${Animation.divGap(2)}`}>
+            <Linkedin size={12} color="orange" strokeWidth={2.75} className={Animation.hover(110)}/>
             <p className="text-left text-orange-300 font-serif text-sm hover:text-blue-500 underline">
               <a href="https://www.linkedin.com/in/muhaisin-xavier-biruar-69336a341/" target="_blank">LinkedIn</a></p>
+            </div>
+            <div className={`${Animation.divGap(2)}`}>
+            <Github size={12} color="orange" strokeWidth={2.75} className={Animation.hover(110)}/>
             <p className="text-left text-orange-300 font-serif text-sm hover:text-blue-500 underline">
               <a href="https://github.com/MuhasinBiruar" target="_blank">GitHub</a></p>
+            </div>
         </div>
       </div>
       
@@ -55,7 +67,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-row justify gap-4 h-[45%] mt-4">
-          <div className={`bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[50%]
+          <div id="education" className={`bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[50%]
           ${Animation.hover(110)} overflow-auto`}>
             <div className="flex items-center gap-2">
               <School size={24} color="Orange" className={Animation.hover(110)}/>
@@ -65,14 +77,33 @@ export default function Home() {
             </div>
             <ul className="list-disc list-inside ml-2">
               <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
-                <span className="list-item"><b>Cotabato City Institute</b> (Kindergarten)</span>
-                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2011-2013</span>
+                <span className="list-item"><b>Cotabato City Institute</b> (Kindergarten to Grade School)</span>
+                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2010-2017</span>
+              </li>
+              <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
+                <span className="list-item"><b>Cotabato City Institute</b> (High School)</span>
+                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2017-2021</span>
               </li>
               <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
                 <span className="list-item"><b>Ateneo de Davao University Senior High School</b> (Senior High)</span>
-                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2021-2023</span>
+                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2021-2024</span>
+              </li>
+              <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
+                <span className="list-item"><b>Ateneo de Davao University</b> (College)</span>
+                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2024-Present</span>
               </li>
             </ul>
+            <div className="flex flex-row justify-around items-center gap-0 mt-2">
+              <div>
+                try
+              </div>
+              <div>
+                try
+              </div>
+              <div>
+                try
+              </div>
+            </div>
           </div>
           <div className={`bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[50%]
           ${Animation.hover(110)} overflow-auto`}>
