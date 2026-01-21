@@ -46,7 +46,7 @@ export default function Modals() {
 
     return (
         <>
-        <div className="flex flex-row justify-between items-center gap-0 mt-2 h-[50%]">
+        <div className="flex flex-row md:flex-row justify-between items-center gap-0 mt-2 h-[50%]">
             <PicContainer>
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                     <Image src={SCHOOLPICTURES[0].src} alt={SCHOOLPICTURES[0].title} fill className="rounded-xl 
@@ -72,7 +72,8 @@ export default function Modals() {
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                     <Image src={SCHOOLPICTURES[2].src} alt={SCHOOLPICTURES[2].title} fill className="rounded-xl object-cover border border-gray-400 drop-shadow-md hover:drop-shadow-2xl transition-all duration-300 ease-in-out" onClick={() => setSelectedPicture(SCHOOLPICTURES[2])} />
                 </div>
-                <span className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-xs p-1 text-center rounded-b-xl md:hidden">
+                <span className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-xs p-1 text-center rounded-b-xl md:hidden" 
+                onClick={() => setSelectedPicture(SCHOOLPICTURES[2])}>
                     {SCHOOLPICTURES[2].title}
                 </span>
             </PicContainer>
@@ -86,9 +87,9 @@ export default function Modals() {
                     md:flex-col transition-transform duration-300 ${isAnimating ? 'scale-100' : 'scale-95'} 
                     gap-2`} 
                     onClick={(e) => e.stopPropagation()}>
-                        <button className="hover:bg-red-500 rounded-full 
+                        <button className="hover:bg-red-500 rounded-md 
                         transition-colors duration-200 ease-in-out absolute top-2 right-2 text-gray-600 hover:text-gray-800 
-                        z-10 text-2xl font-bold px-3 py-1 sticky-top" 
+                        z-10 text-2xl font-bold px-3 py-1 sticky-top cursor-pointer" 
                                 onClick={handleClose}>
                             ✕
                         </button>
@@ -109,7 +110,7 @@ export default function Modals() {
                                     <div key={pic.id} className="w-full h-[50%] rounded-xl hover:z-50 ">
                                         <img src={pic.src} alt={pic.title} className="w-full h-full object-cover rounded-xl 
                                         transition-all duration-400 hover:scale-110 hover:drop-shadow-xl hover:drop-shadow-black
-                                        hover:border hover:border-black" onClick={() => setSelectedPicture(pic)}/>
+                                        hover:border hover:border-black cursor-pointer" onClick={() => setSelectedPicture(pic)}/>
                                     </div>
                                 ))}
                             </div>
