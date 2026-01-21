@@ -1,0 +1,2 @@
+export const gradeSevenDesc = `I was grade 7 at this point in CCI. This picture was taken roughly after the final exams of the school year.
+It was held in our classroom, and I remember we were all excited to finally be done with the exams. We had a small celebration with our classmates, and this picture captures that joyful moment.`;
