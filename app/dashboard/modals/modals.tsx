@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import Hover, {divGap} from '../components/utility';
 import PicContainer from './pic_container';
-import { gradeSevenDesc } from './description';
+import { gradeSevenDesc, gradDesc } from './description';
 interface schoolPicture{
     id: number;
     src: string;
@@ -18,7 +18,7 @@ const SCHOOLPICTURES: schoolPicture[] = [
     {id: 1, src: '/school_pictures/Grade7.jpg', title: 'Grade 7', description: gradeSevenDesc, category: 'CCI'},
     {id: 2, src: '/school_pictures/Grade4.jpg', title: 'Grade 4', description: 'Placeholder', category: 'CCI'},
     {id: 3, src: '/school_pictures/Kinder.jpg', title: 'Kinder', description: 'Placeholder', category: 'CCI'},
-    {id: 4, src: '/school_pictures/Grad1.jpg', title: 'Graduation Day', description: 'Placeholder', category: 'CCI'},
+    {id: 4, src: '/school_pictures/Grad1.jpg', title: 'Graduation Day', description: gradDesc, category: 'CCI'},
     {id: 5, src: '/school_pictures/Grad2.jpg', title: 'Graduation Day', description: 'Placeholder', category: 'CCI'},
     {id: 6, src: '/school_pictures/Grade5.jpg', title: 'Senior High School', description: 'Placeholder', category: 'CCI'},
     {id: 7, src: '/school_pictures/Grade6.jpg', title: 'Grade 6', description: 'Placeholder', category: 'CCI'},
@@ -82,9 +82,9 @@ export default function Modals() {
                 transition-opacity duration-300 ${isAnimating ? 'opacity-100' : 'opacity-0'}`} id="agartha"
                 onClick={handleClose}>
                     <div className={`bg-white rounded-2xl drop-shadow-black drop-shadow-xl border border-black p-4
-                    w-[90%] h-[75%] mx-4 relative overflow-hidden flex flex-col
-                    md:flex-row transition-transform duration-300 ${isAnimating ? 'scale-100' : 'scale-95'} 
-                    justify-between gap-2`} 
+                    w-[90%] h-[75%] mx-4 relative flex flex-row overflow-auto md:overflow-hidden
+                    md:flex-col transition-transform duration-300 ${isAnimating ? 'scale-100' : 'scale-95'} 
+                    gap-2`} 
                     onClick={(e) => e.stopPropagation()}>
                         <button className="hover:bg-red-500 rounded-full 
                         transition-colors duration-200 ease-in-out absolute top-2 right-2 text-gray-600 hover:text-gray-800 
@@ -97,7 +97,7 @@ export default function Modals() {
                             <img src={selectedPicture.src} alt={selectedPicture.title} className="w-full h-full object-cover rounded-xl
                             transition-all duration-1000 hover:rotate-3600 hover:scale-1 hover:drop-shadow-black hover:drop-shadow-xl"/>
                         </div>
-                        <div className="flex flex-row gap-2 w-full mt-10 h-full overflow-y-visible">
+                        <div className="flex flex-col md:flex-row gap-2 w-full mt-10 h-full overflow-y-visible">
                         {SCHOOLPICTURES.filter(pic => pic.id !== selectedPicture?.id && pic.category === selectedPicture?.category).reduce((acc, pic, index, array) => {
                             if (index % 2 === 0) {
                                 acc.push(array.slice(index, index + 2));
@@ -115,6 +115,14 @@ export default function Modals() {
                             </div>
                         ))}
                         </div>
+                        </div>
+                        <div className="border rounded-md w-full h-full mt-12 bg-gray-200 overflow-auto p-2">
+                            <h2>
+                                <b>Description</b>
+                            </h2>
+                            <p>
+                                {selectedPicture.description}
+                            </p>
                         </div>
                     </div>
                 </div>
