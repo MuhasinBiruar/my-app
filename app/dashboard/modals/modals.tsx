@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import Hover, {divGap} from '../components/utility';
 import PicContainer from './pic_container';
-import { gradeSevenDesc, gradDesc } from './description';
+import { gradeSevenDesc, gradDesc, kinderDesc, gradeFourDesc, gradeSixDesc, gradeFiveDesc, seniorHighDesc, seniorHighResearchDesc, seniorHighGradDesc, grade11RandomDesc} from './description';
 interface schoolPicture{
     id: number;
     src: string;
@@ -16,12 +16,17 @@ interface schoolPicture{
 
 const SCHOOLPICTURES: schoolPicture[] = [
     {id: 1, src: '/school_pictures/Grade7.jpg', title: 'Grade 7', description: gradeSevenDesc, category: 'CCI'},
-    {id: 2, src: '/school_pictures/Grade4.jpg', title: 'Grade 4', description: 'Placeholder', category: 'CCI'},
-    {id: 3, src: '/school_pictures/Kinder.jpg', title: 'Kinder', description: 'Placeholder', category: 'CCI'},
+    {id: 2, src: '/school_pictures/Grade4.jpg', title: 'Grade 4', description: gradeFourDesc, category: 'CCI'},
+    {id: 3, src: '/school_pictures/Kinder.jpg', title: 'Kinder', description: kinderDesc, category: 'CCI'},
     {id: 4, src: '/school_pictures/Grad1.jpg', title: 'Graduation Day', description: gradDesc, category: 'CCI'},
-    {id: 5, src: '/school_pictures/Grad2.jpg', title: 'Graduation Day', description: 'Placeholder', category: 'CCI'},
-    {id: 6, src: '/school_pictures/Grade5.jpg', title: 'Senior High School', description: 'Placeholder', category: 'CCI'},
-    {id: 7, src: '/school_pictures/Grade6.jpg', title: 'Grade 6', description: 'Placeholder', category: 'CCI'},
+    {id: 5, src: '/school_pictures/Grad2.jpg', title: 'Graduation Day', description: gradDesc, category: 'CCI'},
+    {id: 6, src: '/school_pictures/Grade5.jpg', title: 'Grade 5', description: gradeFiveDesc, category: 'CCI'},
+    {id: 7, src: '/school_pictures/Grade6.jpg', title: 'Grade 6', description: gradeSixDesc, category: 'CCI'},
+
+    {id: 8, src: '/school_pictures/grade11FirstF2F.jpg', title: 'Grade 11', description: seniorHighDesc, category: 'ADDU'},
+    {id: 9, src: '/school_pictures/grade11SuccessResearchDefense.jpg', title: 'Grade 11 Research Defense', description: seniorHighResearchDesc, category: 'ADDU'},
+    {id: 10, src: '/school_pictures/seniorHighGrad.jpg', title: 'Grade 12 Graduation', description: seniorHighGradDesc, category: 'ADDU'},
+    {id: 11, src: '/school_pictures/grade11Random.jpg', title: 'Grade 12 Graduation', description: grade11RandomDesc, category: 'ADDU'},
 ]
 
 export default function Modals() {
@@ -60,12 +65,12 @@ export default function Modals() {
             </PicContainer>
             <PicContainer>
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
-                    <Image src={SCHOOLPICTURES[1].src} alt={SCHOOLPICTURES[1].title} fill className="rounded-xl \
+                    <Image src={SCHOOLPICTURES[7].src} alt={SCHOOLPICTURES[1].title} fill className="rounded-xl \
                         object-cover border border-gray-400 drop-shadow-md hover:drop-shadow-2xl transition-all \
-                        duration-300 ease-in-out" onClick={() => setSelectedPicture(SCHOOLPICTURES[1])} />
+                        duration-300 ease-in-out" onClick={() => setSelectedPicture(SCHOOLPICTURES[7])} />
                 </div>
                 <span className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-xs p-1 text-center rounded-b-xl md:hidden">
-                    {SCHOOLPICTURES[1].title}
+                    {SCHOOLPICTURES[7].title}
                 </span>
             </PicContainer>
             <PicContainer>
@@ -83,7 +88,7 @@ export default function Modals() {
                 transition-opacity duration-300 ${isAnimating ? 'opacity-100' : 'opacity-0'}`} id="agartha"
                 onClick={handleClose}>
                     <div className={`bg-white rounded-2xl drop-shadow-black drop-shadow-xl border border-black p-4
-                    w-[90%] h-[75%] mx-4 relative flex flex-row overflow-auto md:overflow-hidden
+                    w-full md:w-[90%] h-[75%] mx-4 relative flex flex-row overflow-auto md:overflow-hidden
                     md:flex-col transition-transform duration-300 ${isAnimating ? 'scale-100' : 'scale-95'} 
                     gap-2`} 
                     onClick={(e) => e.stopPropagation()}>
