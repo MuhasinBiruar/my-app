@@ -5,7 +5,8 @@ import Image from 'next/image';
 import Hover, {divGap} from '../components/utility';
 import PicContainer from './pic_container';
 import { gradeSevenDesc, gradDesc, kinderDesc, gradeFourDesc, gradeSixDesc, gradeFiveDesc, seniorHighDesc, 
-    seniorHighResearchDesc, seniorHighGradDesc, grade11RandomDesc, grade11AdvocacyDesc} from './description';
+    seniorHighResearchDesc, seniorHighGradDesc, grade11RandomDesc, grade11AdvocacyDesc,
+    grade11BestDefenseDesc} from './description';
 interface schoolPicture{
     id: number;
     src: string;
@@ -30,7 +31,7 @@ const SCHOOLPICTURES: schoolPicture[] = [
     {id: 11, src: '/school_pictures/grade11Random.jpg', title: 'Grade 11 Random Event', description: grade11RandomDesc, category: 'ADDU'},
     {id: 12, src: '/school_pictures/grade11Advocacy.jpg', title: 'Grade 11 Advocacy', description: grade11AdvocacyDesc, category: 'ADDU'},
     {id: 13, src: '/school_pictures/seniorHighGrad2.jpg', title: 'Grade 12 Graduation', description: seniorHighGradDesc, category: 'ADDU'},
-    {id: 14, src: '/school_pictures/grade11BestDefense.jpg', title: 'Grade 12 Best Quan Research Defense', description: seniorHighGradDesc, category: 'ADDU'},
+    {id: 14, src: '/school_pictures/grade11BestDefense.jpg', title: 'Grade 12 Best Quan Research Defense', description: grade11BestDefenseDesc, category: 'ADDU'},
 ]
 
 export default function Modals() {
