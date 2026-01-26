@@ -66,3 +66,5 @@ export const seniorHighGradDesc = `This picture was taken during my graduation d
                                     treasured`;
 
 export const grade11RandomDesc = `This is a random picture taken during a class inside one of the computer labs in AdDU`;
+
+export const grade11AdvocacyDesc = `This picture relates to our advocacy project in 11th Grade.`;

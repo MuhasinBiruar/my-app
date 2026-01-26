@@ -4,7 +4,8 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import Hover, {divGap} from '../components/utility';
 import PicContainer from './pic_container';
-import { gradeSevenDesc, gradDesc, kinderDesc, gradeFourDesc, gradeSixDesc, gradeFiveDesc, seniorHighDesc, seniorHighResearchDesc, seniorHighGradDesc, grade11RandomDesc} from './description';
+import { gradeSevenDesc, gradDesc, kinderDesc, gradeFourDesc, gradeSixDesc, gradeFiveDesc, seniorHighDesc, 
+    seniorHighResearchDesc, seniorHighGradDesc, grade11RandomDesc, grade11AdvocacyDesc} from './description';
 interface schoolPicture{
     id: number;
     src: string;
@@ -26,7 +27,10 @@ const SCHOOLPICTURES: schoolPicture[] = [
     {id: 8, src: '/school_pictures/grade11FirstF2F.jpg', title: 'Grade 11', description: seniorHighDesc, category: 'ADDU'},
     {id: 9, src: '/school_pictures/grade11SuccessResearchDefense.jpg', title: 'Grade 11 Research Defense', description: seniorHighResearchDesc, category: 'ADDU'},
     {id: 10, src: '/school_pictures/seniorHighGrad.jpg', title: 'Grade 12 Graduation', description: seniorHighGradDesc, category: 'ADDU'},
-    {id: 11, src: '/school_pictures/grade11Random.jpg', title: 'Grade 12 Graduation', description: grade11RandomDesc, category: 'ADDU'},
+    {id: 11, src: '/school_pictures/grade11Random.jpg', title: 'Grade 11 Random Event', description: grade11RandomDesc, category: 'ADDU'},
+    {id: 12, src: '/school_pictures/grade11Advocacy.jpg', title: 'Grade 11 Advocacy', description: grade11AdvocacyDesc, category: 'ADDU'},
+    {id: 13, src: '/school_pictures/seniorHighGrad2.jpg', title: 'Grade 12 Graduation', description: seniorHighGradDesc, category: 'ADDU'},
+    {id: 14, src: '/school_pictures/grade11BestDefense.jpg', title: 'Grade 12 Best Quan Research Defense', description: seniorHighGradDesc, category: 'ADDU'},
 ]
 
 export default function Modals() {
