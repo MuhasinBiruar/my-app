@@ -6,7 +6,9 @@ import Hover, {divGap} from '../components/utility';
 import PicContainer from './pic_container';
 import { gradeSevenDesc, gradDesc, kinderDesc, gradeFourDesc, gradeSixDesc, gradeFiveDesc, seniorHighDesc, 
     seniorHighResearchDesc, seniorHighGradDesc, grade11RandomDesc, grade11AdvocacyDesc,
-    grade11BestDefenseDesc} from './description';
+    grade11BestDefenseDesc,
+    $3rdHonorSeniorH,
+    bestResearchPaperDesc} from './description';
 interface schoolPicture{
     id: number;
     src: string;
@@ -32,6 +34,12 @@ const SCHOOLPICTURES: schoolPicture[] = [
     {id: 12, src: '/school_pictures/grade11Advocacy.jpg', title: 'Grade 11 Advocacy', description: grade11AdvocacyDesc, category: 'ADDU'},
     {id: 13, src: '/school_pictures/seniorHighGrad2.jpg', title: 'Grade 12 Graduation', description: seniorHighGradDesc, category: 'ADDU'},
     {id: 14, src: '/school_pictures/grade11BestDefense.jpg', title: 'Grade 12 Best Quan Research Defense', description: grade11BestDefenseDesc, category: 'ADDU'},
+
+    {id: 15, src: '/school_pictures/3rdHonorSeniorH.jpg', title: '3rd Honor Senior High', description: $3rdHonorSeniorH, category: 'FAVE'},
+    {id: 16, src: '/school_pictures/2ndHonorSeniorH.jpg', title: '2nd Honor Senior High', description: $3rdHonorSeniorH, category: 'FAVE'},
+    {id: 17, src: '/school_pictures/BestResearchPaper.jpg', title: 'Best Research Paper', description: bestResearchPaperDesc, category: 'FAVE'},
+    {id: 18, src: '/school_pictures/grade11BestDefense.jpg', title: 'Grade 12 Best Quan Research Defense', description: grade11BestDefenseDesc, category: 'FAVE'},
+    {id: 19, src: '/school_pictures/BestResearchCert.jpg', title: 'Grade 12 Best Quan Research Defense', description: grade11BestDefenseDesc, category: 'FAVE'},
 ]
 
 export default function Modals() {
@@ -80,11 +88,11 @@ export default function Modals() {
             </PicContainer>
             <PicContainer>
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
-                    <Image src={SCHOOLPICTURES[2].src} alt={SCHOOLPICTURES[2].title} fill className="rounded-xl object-cover border border-gray-400 drop-shadow-md hover:drop-shadow-2xl transition-all duration-300 ease-in-out" onClick={() => setSelectedPicture(SCHOOLPICTURES[2])} />
+                    <Image src={SCHOOLPICTURES[14].src} alt={SCHOOLPICTURES[14].title} fill className="rounded-xl object-cover border border-gray-400 drop-shadow-md hover:drop-shadow-2xl transition-all duration-300 ease-in-out" onClick={() => setSelectedPicture(SCHOOLPICTURES[14])} />
                 </div>
                 <span className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-xs p-1 text-center rounded-b-xl md:hidden" 
-                onClick={() => setSelectedPicture(SCHOOLPICTURES[2])}>
-                    {SCHOOLPICTURES[2].title}
+                onClick={() => setSelectedPicture(SCHOOLPICTURES[14])}>
+                    {SCHOOLPICTURES[14].title}
                 </span>
             </PicContainer>
         </div>
@@ -93,7 +101,7 @@ export default function Modals() {
                 transition-opacity duration-300 ${isAnimating ? 'opacity-100' : 'opacity-0'}`} id="agartha"
                 onClick={handleClose}>
                     <div className={`bg-white rounded-2xl drop-shadow-black drop-shadow-xl border border-black p-4
-                    w-full md:w-[90%] h-[75%] mx-4 relative flex flex-row overflow-auto md:overflow-hidden
+                    w-full md:w-[90%] h-full md:h-[75%] mx-4 relative flex flex-col overflow-auto md:overflow-hidden
                     md:flex-col transition-transform duration-300 ${isAnimating ? 'scale-100' : 'scale-95'} 
                     gap-2`} 
                     onClick={(e) => e.stopPropagation()}>
@@ -108,7 +116,7 @@ export default function Modals() {
                             <img src={selectedPicture.src} alt={selectedPicture.title} className="w-full h-full object-cover rounded-xl
                             transition-all duration-1000 hover:rotate-3600 hover:scale-1 hover:drop-shadow-black hover:drop-shadow-xl"/>
                         </div>
-                        <div className="flex flex-col md:flex-row gap-2 w-full mt-10 h-full overflow-y-visible">
+                        <div className="flex flex-row md:flex-row gap-2 w-full mt-10 h-full overflow-y-visible">
                         {SCHOOLPICTURES.filter(pic => pic.id !== selectedPicture?.id && pic.category === selectedPicture?.category).reduce((acc, pic, index, array) => {
                             if (index % 2 === 0) {
                                 acc.push(array.slice(index, index + 2));

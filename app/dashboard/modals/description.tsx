@@ -72,3 +72,9 @@ export const grade11AdvocacyDesc = `This picture relates to our advocacy project
 export const grade11BestDefenseDesc = `Since we were selected as the best quantitative research for the STEM Pre-CS strand, we were given
                                        another defense but this time the panel was composed of college professors. This picture was taken
                                        during that momentous event.`;
+
+export const $3rdHonorSeniorH = `During my senior high school years, I was consistently part of the honor roll.`;
+
+export const bestResearchPaperDesc = `This screenshot was taken when we got news that our research paper was awarded as the Best Quantitative Research Paper for STEM Pre-CS`;
+
+export const bestResearchPaperAdDUDesc = `This picture was taken after we were able to get our certificates for best research in our respective strands.`;

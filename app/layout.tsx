@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header, {Footer} from "./dashboard/components/headerfooter";
-
+import { ScrollTop } from 'primereact/scrolltop';
+import Menu from "./dashboard/components/menu";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +28,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header/>
+        {/* <Menu/> */}
         {children}
+        <ScrollTop className="bg-gray-600! hover:bg-blue-600! text-white! rounded-full! w-12! h-12! shadow-lg! hover:shadow-xl! 
+        transition-all! duration-300! flex! items-center! justify-center! hover:-translate-y-1!"/>
         <Footer/>
       </body>
     </html>
