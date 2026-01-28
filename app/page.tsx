@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { School, Notebook, Mail, MapPin, Facebook, Linkedin, Github} from 'lucide-react';
+import { School, Notebook, Mail, MapPin, Facebook, Linkedin, Github, FolderGit} from 'lucide-react';
 import Animation from "./dashboard/components/utility";
 import Modals from "./dashboard/modals/modals";
 
@@ -111,9 +111,23 @@ const TwoColumnInfo = () => {
           </div>
           <div className={`bg-white rounded-md border-2 border-gray-300 shadow-lg p-2 h-full w-[50%]
           ${Animation.hover(110)} overflow-auto`}>
-            <p className="font-bold font-serif text-left text-md">
-              Beepes2
-            </p>
+            <div className="flex items-center gap-2">
+              <FolderGit size={24} color="Orange" className={Animation.hover(110)}/>
+              <p className="font-bold font-serif text-left text-md">
+                Previous Projects
+              </p>
+            </div>
+            <ol className="list-decimal list-inside ml-2">
+              <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
+                <span className="list-item"><b><a href="https://muhasinbiruar.github.io/ITC/index.html" target="_blank" className="hover:text-blue-500 hover:underline">Intro To Computing Project</a></b></span>
+                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2024</span>
+              </li>
+              <li className="font-serif text-xs md:text-sm mt-1 flex justify-between items-center">
+                <span className="list-item"><b><a href="https://muhasinbiruar.github.io/EDP_activity/" target="_blank" className="hover:text-blue-500 hover:underline">Event-Driven Programming Login Activity</a></b></span>
+                <span className={`text-gray-400 font-bold ${Animation.hover(115)}`}>2026</span>
+              </li>
+
+            </ol>
           </div>
           
         </div>
