@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header, {Footer} from "./dashboard/components/headerfooter";
 import { ScrollTop } from 'primereact/scrolltop';
-import Menu from "./dashboard/components/menu";
+// import Menu from "./dashboard/components/menu";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
