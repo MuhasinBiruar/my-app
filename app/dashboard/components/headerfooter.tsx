@@ -26,8 +26,8 @@ export function Footer() {
   return (
     <>
       {/* This is our new header */}
-      <div className="fixed bottom-0 w-full border-b border-t bg-gray-700 text-white text-center shadow-2xl font-serif"> 
-        This is the footer
+      <div className="fixed bottom-0 w-full border-b border-t bg-gray-700 text-white text-center shadow-2xl font-serif h-10 items-center flex justify-center"> 
+        <span className="font-serif">Muhaisin Xavier E. Biruar (S.Y. 2025-2026) </span>
       </div>
       {/* End of Footer and start of the main div */}
     </>
